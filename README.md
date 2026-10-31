@@ -1,33 +1,38 @@
-# Elden Coop lets friends play one Elden Ring world together
+# Elden Coop
 
-Elden Coop is in early development, and the builds in this repository are for early testing. Expect crashes and missing features. Elden Coop is an open source project. Its source repositories are not public yet, and they go public later.
+Play one Elden Ring world together with friends. Elden Coop is in early development and these builds are for early testing, so expect crashes and missing features. It is an open source project, and the source goes public later.
 
-## One copy protects your saves before the first run
-
-The mod never opens your normal save, but this is an early test, so keep a copy anyway.
-
-1. Close the game. Press Windows and R, type `%APPDATA%\EldenRing` and press Enter.
-2. Copy that whole folder to a safe place.
-
-To recover, close the game and copy the folder back. Your coop characters live in the `EldenCoop` folder inside it, and Steam Cloud may not back them up, so copy that folder again after a good session.
-
-## One file installs and starts the mod
+## Install
 
 1. Open Steam and sign in. You need Elden Ring version 2.7.2.0.
 2. Download `EldenCoop.exe` from the [newest release](https://github.com/alexandremahdhaoui/elden-coop-release/releases/latest).
-3. Double click `EldenCoop.exe`. Windows may warn you about an unknown publisher. Click More info, then Run anyway.
-4. Press TRUST THE ELDEN COOP CERTIFICATE and approve the Windows prompt.
+3. Double click it. If Windows warns you about an unknown publisher, click More info, then Run anyway.
+4. Approve the Windows admin prompt the first time it appears.
 5. Press PLAY.
 
-The launcher finds the game through Steam and installs the mod in the game folder. It updates itself when a new build comes out, and it only installs a build that carries a valid Elden Coop signature. The launcher asks for admin approval only in step 4, and it never runs as admin otherwise.
+The launcher finds the game through Steam, installs the mod and updates itself. It only installs builds with a valid Elden Coop signature.
 
-## Trusting the certificate gives this PC a new root
+Step 4 is the only time the launcher asks for admin rights. It adds the Elden Coop certificate, so this PC trusts code that Elden Coop signs. Approve it only if you trust the person who sent you here.
 
-Step 4 adds the Elden Coop root certificate to Windows. This PC then trusts code that Elden Coop signs, so only do this if you trust the person who sent you here. The launcher shows REMOVE THE CERTIFICATE to undo it.
+## Join a friend
 
-## Windows Smart App Control needs one extra step
+1. Wait on the title menu for a Steam invite from your host.
+2. Press Shift and Tab to open the Steam overlay, then accept the invite.
+3. In the game, pick MULTIPLAYER, then JOIN A WORLD, then JOIN FROM A STEAM INVITE.
+4. Pick CREATE A CHARACTER and finish the character creator.
+5. Stay in the game when you reach the world. The mod joins the host by itself.
 
-Smart App Control can block `EldenCoop.exe` before the launcher opens, so the button in step 4 cannot help. Open Windows Terminal as administrator, paste this block, then double click `EldenCoop.exe` again.
+Use only the MULTIPLAYER menu, and do not press Escape on the title screen.
+
+## Your saves
+
+The mod keeps its own saves in a separate folder and refuses to open your normal save.
+
+Before each game, the launcher copies every changed file from `%APPDATA%\EldenRing` to the `EldenCoop-backups` folder in your user folder. It keeps the older copies. It never deletes a save and has no restore feature. If something goes wrong, ask your host before you touch these files.
+
+## If Windows blocks the launcher
+
+Use this if `EldenCoop.exe` will not open or step 4 failed. Open Windows Terminal as administrator, paste this block, then double click `EldenCoop.exe` again.
 
 ```powershell
 $base = "https://github.com/alexandremahdhaoui/elden-coop-release/releases/latest/download"
@@ -37,30 +42,18 @@ Import-Certificate -FilePath "$env:TEMP\EldenCoop-root.cer" -CertStoreLocation C
 Import-Certificate -FilePath "$env:TEMP\EldenCoop-publisher.cer" -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 ```
 
-## Your normal save stays safe
+## Report a problem
 
-The mod keeps its own saves in a separate folder and refuses to open the normal save. Use only the MULTIPLAYER menu in the game. Do not press Escape on the title screen.
+Press SAVE A DIAGNOSTIC REPORT in the launcher. It saves one zip with the logs of your last five runs on your Desktop, then opens the folder. The zip stays on your PC until you send it to your host by hand.
 
-## A host invites you through Steam
-
-1. The host sends you a Steam invite while your game sits on the title menu.
-2. Press Shift and Tab to open the Steam overlay, then accept the invite.
-3. In the game pick MULTIPLAYER, then JOIN A WORLD, then JOIN FROM A STEAM INVITE.
-4. Pick CREATE A CHARACTER and finish the character creator.
-5. Stay in the game when you reach the world. The mod joins the host by itself.
-
-## A report helps fix a problem
-
-Press SAVE A DIAGNOSTIC REPORT in the launcher. The launcher saves one zip on your Desktop and opens the folder for you. The zip holds the logs of the last five runs. It stays on your PC until you send it to your host by hand.
-
-## Removing the mod takes three steps
+## Uninstall
 
 1. Press REMOVE THE CERTIFICATE in the launcher and approve the Windows prompt.
 2. Delete `EldenCoop.exe`.
 3. Delete the `EldenCoop` folder from the `Game` folder of Elden Ring.
 
-Start the game from Steam as usual to play the normal game.
+To play the normal game, start it from Steam as usual.
 
-## The license covers only the work of this project
+## License
 
 Elden Coop uses the Apache License 2.0 in `LICENSE`, limited by `LICENSE-ADDENDUM.md`. The license covers the launcher, the mod code and the methods of this project. It never covers Elden Ring or anything that belongs to FromSoftware.
