@@ -2,6 +2,15 @@
 
 Elden Coop is in early development, and the builds in this repository are for early testing. Expect crashes and missing features. Elden Coop is an open source project. Its source repositories are not public yet, and they go public later.
 
+## One copy protects your saves before the first run
+
+The mod never opens your normal save, but this is an early test, so keep a copy anyway.
+
+1. Close the game. Press Windows and R, type `%APPDATA%\EldenRing` and press Enter.
+2. Copy that whole folder to a safe place.
+
+To recover, close the game and copy the folder back. Your coop characters live in the `EldenCoop` folder inside it, and Steam Cloud may not back them up, so copy that folder again after a good session.
+
 ## One file installs and starts the mod
 
 1. Open Steam and sign in. You need Elden Ring version 2.7.2.0.
