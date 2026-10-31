@@ -1,5 +1,7 @@
 # Elden Coop
 
+<img src="icon.png" alt="Elden Coop logo" width="128">
+
 Play one Elden Ring world together with friends. Elden Coop is in early development and these builds are for early testing, so expect crashes and missing features. It is an open source project, and the source goes public later.
 
 ## Install
