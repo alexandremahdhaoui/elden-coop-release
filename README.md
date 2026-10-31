@@ -8,7 +8,7 @@ Play one Elden Ring world together with friends. Elden Coop is in early developm
 2. Download `EldenCoop.exe` from the [newest release](https://github.com/alexandremahdhaoui/elden-coop-release/releases/latest).
 3. Double click it. If Windows warns you about an unknown publisher, click More info, then Run anyway.
 4. Approve the Windows admin prompt the first time it appears.
-5. Press PLAY.
+5. Press Play.
 
 The launcher finds the game through Steam, installs the mod and updates itself. It only installs builds with a valid Elden Coop signature.
 
@@ -44,11 +44,11 @@ Import-Certificate -FilePath "$env:TEMP\EldenCoop-publisher.cer" -CertStoreLocat
 
 ## Report a problem
 
-Press SAVE A DIAGNOSTIC REPORT in the launcher. It saves one zip with the logs of your last five runs on your Desktop, then opens the folder. The zip stays on your PC until you send it to your host by hand.
+Press Save a diagnostic report in the launcher. It saves one zip with the logs of your last five runs on your Desktop, then opens the folder. The zip stays on your PC until you send it to your host by hand.
 
 ## Uninstall
 
-1. Press REMOVE THE CERTIFICATE in the launcher and approve the Windows prompt.
+1. Press Remove the certificate in the launcher and approve the Windows prompt.
 2. Delete `EldenCoop.exe`.
 3. Delete the `EldenCoop` folder from the `Game` folder of Elden Ring.
 
