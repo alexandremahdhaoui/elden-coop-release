@@ -4,6 +4,49 @@ Elden Coop lets friends play Elden Ring together in one shared world. The newest
 
 The host is the player who owns the world. A guest is a player who joins the host's world. The party is every player in that world. A session is the time the party plays together.
 
+## v0.0.26
+
+November 21, 2026. All players must update.
+
+This update fixes the graces of a guest after a trip to Roundtable Hold, a boss that kept fighting after the whole party died, map fragments, items that a player got twice and the place where a guest joins again.
+
+### New features
+
+- Added a message for players who play two different versions of Elden Coop. The message tells the player with the older version to update Elden Coop.
+
+### Changes
+
+- Changed the bug report. A bug report now holds the last two runs of the game and the crash files from those runs. A bug report is now much smaller.
+- Changed resting at a grace. The enemies come back only when every player in the world rests. A player who is dead or in a loading screen keeps the enemies from coming back. A player at the title screen does not count.
+- Changed graces. When one player lights a grace, the game lights that grace for every player in the party. No other player has to touch that grace.
+- Changed what happens when every player in a boss fight dies. Each player who fought the boss gets a loading screen. A player who fought the boss gets the loading screen even at a grace. A player who did not fight the boss gets no loading screen. A player who leaves the session during a boss fight counts as a dead player in that fight. A boss fight ends when the party defeats the boss.
+
+### Bug fixes
+
+- Fixed a bug where a guest could not light a grace or rest at a grace after the party left Roundtable Hold.
+- Fixed a bug where a boss kept fighting after every player in the fight died. Now the boss fight starts over for each player who fought the boss when all of those players die.
+- Fixed a bug where a map fragment that one player found did not open the map for the other players. Now a map fragment opens the map for the whole party.
+- Fixed a bug where a guest got the same items again each time the guest joined a world. Now each character of a guest gets each item of a world once. Now a new character in the slot of a deleted character also gets every item of the world.
+- Fixed a bug where each player got the reward of a boss twice. Now each player gets the boss reward once.
+- Fixed a bug where the game stopped for a moment when a player got an item from another player. Now the game keeps running while a player gets an item from another player.
+- Fixed a bug where a guest who lost the session and joined again started far from the host. Now the guest joins again at the place of the host.
+- Fixed a bug where the main menu did not show the Elden Coop version.
+- Fixed a bug where the main menu opened on LOAD GAME or NEW GAME after a player started a world from the Elden Coop menu. Now the main menu opens on its usual row.
+- Fixed a bug where the map did not show the name of another player. Now the map shows the name of each player under the marker of that player.
+- Fixed a bug where a player saw another player on foot while that player rode Torrent. Now the game puts that player on Torrent.
+- Fixed a bug where a player who rode Torrent stayed in an old place on the screens of the other players. Now the game puts that player in the right area of the map.
+
+### Known issues
+
+- When a player dies far from a Stake of Marika, the game still reloads the area for that player.
+- When the host dies far from a Stake of Marika in a boss fight, the boss can start over for the other players.
+- When one player finds a map fragment, the other players find no map fragment at that spot. The map is already open for them.
+- The first time a guest joins a world after this update, the guest gets the items of that world once more.
+- When a player stands up at a Stake of Marika inside a boss fight and the boss bar does not show again, the game can reload the area for that player when the other players in the fight die.
+- When a player dies in a boss fight and walks back before the rest of the party dies, that player gets a second loading screen.
+- When the host or a guest plays v0.0.25 or an older version, the guest sees no message about the other version.
+- Outside Limgrave, some NPCs may not share talks and quest progress with the whole party.
+
 ## v0.0.25
 
 November 19, 2026. All players should update.
