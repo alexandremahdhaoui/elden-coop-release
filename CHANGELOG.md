@@ -4,6 +4,102 @@ Elden Coop lets friends play Elden Ring together in one shared world. The newest
 
 The host is the player who owns the world. A guest is a player who joins the host's world. The party is every player in that world. A session is the time the party plays together.
 
+## v0.0.27
+
+November 22, 2026. All players must update.
+
+This update adds a path to a friend, a fight view for players who die in a boss fight, messages about friends, missed NPC lines for the whole party, settings for enemy scaling, and a settings page in the launcher and in the game.
+
+### New features
+
+- Added a path to a friend. The game draws an orange band on the ground from the player to one friend. The band goes around walls and down stairs.
+- Added a path toward a friend who is far away. The orange band leads to the edge of the land that the game has loaded in the direction of that friend.
+- Added a column of light over each friend. A player can see where a friend stands from far away.
+- Added the setting Pillars over friends. A player turns the columns of light on or off with the setting Pillars over friends.
+- Added settings for enemy scaling. The host picks how much more health, damage and posture enemies get for each extra player. The host picks the health, damage and posture of bosses in separate settings. The host also picks how many more items the party finds for each extra player.
+- Added the scaling settings of the host to the settings page of each guest. During a session, a guest sees the values that the host picked. A guest cannot change the values that the host picked.
+- Added a PATH row to the Multiplayer page of the pause menu. A player picks a friend with that row. A player also turns the path off with that row.
+- Added a Settings link to the launcher under the What's new link. The Settings link opens the settings page of the launcher.
+- Added a SETTINGS row to the MULTIPLAYER menu of the main menu and to the Multiplayer page of the pause menu. The SETTINGS row opens a settings page. A player changes the settings with a controller during a session.
+- Added three settings. Bug report detail sets how much the game writes for a bug report. Stutter fix turns the stutter fix on or off at the next start of the game. Path to friends turns the path to a friend on or off.
+- Added the file settings.yaml to the EldenCoop folder of the game. The file settings.yaml holds the settings that a player changed. A player can open the file settings.yaml with Notepad from the settings page of the launcher.
+- Added a Bug report link to the launcher. A player picks how many runs of the game the bug report holds. The launcher shows the size of each bug report in MB.
+- Added a fight view for players who die in a boss fight. When a player dies in a boss fight and another player still fights the boss, the player who died watches the other players. The player who died comes back when the boss falls, when the whole party dies, or when a player rests at a grace.
+- Added the Steam keyboard for naming a world with a controller. In Big Picture and on Steam Deck, a player types the name of a world on the screen.
+- Added buttons to the fight view. A player who watches presses RB or F6 to watch the next player. A player who watches presses LB or F5 to watch the previous player. A player who watches presses X or F7 twice to stop watching and go back to the last grace.
+- Added a message when a friend talks to an NPC. The message names the friend and the NPC. The game shows the message for the same friend and the same NPC at most once in 5 minutes.
+- Added a message when the party moves a quest forward. The message names the NPC of the last talk. The game shows at most one quest message each minute.
+- Added a message when a friend dies. The message names the friend.
+- Added a message when a friend leaves the world. The message names the friend.
+- Added a message when a friend lights a grace. The message names the friend and the grace.
+- Added a message when a friend travels to a grace. The message names the friend and the grace.
+- Added a message when a friend does not have Shadow of the Erdtree. The message says that the friend cannot enter the Land of Shadow.
+- Added the level, the ping and the number of deaths of each friend under the GO TO row of that friend on the Multiplayer page of the pause menu.
+- Added the setting Party messages. A player turns off the messages about friends with the setting Party messages.
+- Added missed NPC lines. When one player hears an NPC say a quest line, the quest moves on for the whole party. When another player talks to that NPC later, the NPC says the full line to that player once. The game keeps the missed NPC lines of each character after the player leaves the session.
+
+### Changes
+
+- Changed the settings file. The game no longer reads the file elden_coop.ini. A player who turned the stutter fix off in elden_coop.ini turns the Stutter fix off again on the settings page.
+- Changed the Save a diagnostic report button of the launcher. The Save a diagnostic report button now opens the same choice as the Bug report link.
+- Changed the bug report. A bug report now also holds the file settings.yaml.
+- Changed the Uninstall link. The Uninstall link now keeps the file settings.yaml.
+- Changed the map so that the icon of each friend is 1.5 times as large. The map now shows the name of each friend in light blue under the icon of that friend.
+- Changed how the party finds items. Each friend in the party now raises the item discovery of every player by 100 percent. The host can change the item discovery for each friend on the settings page.
+- Changed the STUTTER FIX row of the settings page in the game. The row now says AT NEXT START after a player changes the stutter fix.
+- Changed what happens when a player dies far from a Stake of Marika outside a boss fight while another player in the party is alive. The player stands up at the last grace with no loading screen when the last grace is in the same part of the map.
+- Changed what happens when a player dies in a boss fight and the boss falls. The player stands up where the player fell, with full health.
+- Changed what happens when a player quits to the title. The other players now see at once that the player left.
+- Changed the box where a player types the name of a world. The game now keeps running while the box is open.
+- Changed the Data Analysis question at the start of the game. A player now answers the Data Analysis question as in the base game.
+- Changed the log files. The game now keeps the log files of the last 10 runs. The choice Every run of the Bug report link now holds the last 10 runs.
+- Changed resting at a grace. When a player rests at a grace, the game now always refills the items of that player from the party chest.
+- Changed GO TO for a player without Shadow of the Erdtree. A player without Shadow of the Erdtree cannot travel to a friend in the Land of Shadow. The game shows a message that says why.
+
+### Bug fixes
+
+- Fixed a bug where normal enemies kept the health of a solo game in a party. Now enemies get more health for each extra player.
+- Fixed a bug where the map and the compass showed a friend in the wrong place while the friend rode Torrent. Now the map and the compass show each friend at the place that the friend's own game reports.
+- Fixed a bug where a player who rode Torrent showed up far away on the screens of the other players. Now the game shows that player at the right place within two seconds after the player gets on Torrent.
+- Fixed a bug where the spirit summon of another player could stand far from that player. Now the game shows the spirit summon next to that player.
+- Fixed a bug where a player flickered between two places on the screens of the other players after the player got off Torrent. Now the game shows that player in one place.
+- Fixed a bug where a player who rode Torrent showed up on foot on the screen of another player after a load. Now the game puts that player back on Torrent within two seconds.
+- Fixed a bug where a player who got on Torrent was pulled off Torrent on the screen of another player. Now the game shows that player on Torrent from the moment the player gets on.
+- Fixed a bug where a player could not offer a bell bearing to the Twin Maiden Husks after a friend had offered the same bell bearing. Now each player offers his own bell bearing to the Twin Maiden Husks. After the offer, the Twin Maiden Husks sell the new items to the player who offered the bell bearing.
+- Fixed a bug where a boss fight ended at once when the clock of the host's PC changed. Now a boss fight ends only when the party wins, when the party dies or when the party walks away from the boss.
+- Fixed a bug where the last player to rest at a grace saw two black screens. Now the last player to rest at a grace sees one black screen, like a rest in the base game.
+- Fixed a bug where some boss fights, such as the fight with Starscourge Radahn, did not end when the party defeated the boss. Now the boss fight ends when the party defeats the boss.
+- Fixed a bug where a boss fight with two bosses ended when the first boss fell. Now the boss fight starts over for the party when the second boss defeats every player who fought.
+- Fixed a bug where the boss started over for the other players when the host died far from a Stake of Marika in a boss fight. Now the host watches the fight.
+- Fixed a bug where a player who died in a boss fight got two loading screens. Now the player who died gets one loading screen when the whole party dies.
+- Fixed a bug where a player who died in a boss fight got a loading screen when the boss fell right after that death. Now that player watches the fight and stands up where the player fell.
+- Fixed a bug where a player who used GO TO and then died came back at a grace far away from the party. Now the player comes back at the grace closest to the place where GO TO took the player. The game picks only a grace that the player found before.
+- Fixed a bug where the guests lost the session when the host died and the loading screen came late. Now the guests stay in the session while the host loads after a death.
+- Fixed a bug where a guest still played as a guest in his own world after he left the host's world. Now a guest who goes home plays his own world again.
+- Fixed a bug where a player who stood up at a grace stayed invisible to the other players. Now the other players see that player at once.
+- Fixed a bug where the game could crash when a player closed the game. Now the game finishes saving and then closes at once.
+- Fixed a bug where a player got Baldachin's Blessing twice when a friend got Baldachin's Blessing at the same time. Now a player gets the Baldachin's Blessing of a friend only when the game of that player gave no Baldachin's Blessing.
+- Fixed a bug where a guest who joined later did not get a boss item that the host got before friends could join. Now the game records every boss item that the host gets in that world. A guest who joins later gets each of those boss items.
+- Fixed a bug where a player could lose part of a purchase when the inventory was full. Now a merchant sells a player only as many items as the inventory holds.
+- Fixed a bug where a door that one player opened with a key could stay shut for the other players after a loading screen. Now a door that one player opens with a key stays open for the whole party.
+- Fixed a bug where a player found no map fragment at a spot where a friend had found the map fragment. Now every player in the party gets the map fragment when one player finds it.
+- Fixed a bug where some NPCs outside Limgrave reacted to a player who stood far away. Now each NPC in every area reacts to the player who stands near that NPC.
+- Fixed a bug where the Talk to Ranni choice at a grace appeared and disappeared while a friend walked near Ranni. Now each player sees the Talk to Ranni choice only when that player stands near Ranni.
+
+### Other
+
+- Improved how the game saves the character of a guest. The character of a guest now always loads as a main player.
+
+### Known issues
+
+- When the last player rests at a grace, every player who already rests at that grace sees one short black screen over the grace menu.
+- When a player dies far from a Stake of Marika and the last grace is in another part of the map, the game still reloads the area for that player.
+- When a player stands up at a grace inside a boss fight and the boss bar does not show again, the game can reload the area for that player when the other players in the fight die.
+- When the host dies in a boss fight, the boss fight can start over for the other players while the host watches the fight.
+- Some field bosses do not end the fight view when they fall. Workaround: Press X or F7 twice.
+- When an NPC dies or leaves the area, the NPC does not say a missed line again.
+- Some NPCs say only the short line to a player who missed the full line.
+
 ## v0.0.26
 
 November 21, 2026. All players must update.
@@ -40,12 +136,12 @@ This update fixes the graces of a guest after a trip to Roundtable Hold, a boss 
 
 - When a player dies far from a Stake of Marika, the game still reloads the area for that player.
 - When the host dies far from a Stake of Marika in a boss fight, the boss can start over for the other players.
-- When one player finds a map fragment, the other players find no map fragment at that spot. The map is already open for them.
+- When one player finds a map fragment, the other players find no map fragment at that spot. The map is already open for them. Fixed in v0.0.27.
 - The first time a guest joins a world after this update, the guest gets the items of that world once more.
 - When a player stands up at a Stake of Marika inside a boss fight and the boss bar does not show again, the game can reload the area for that player when the other players in the fight die.
 - When a player dies in a boss fight and walks back before the rest of the party dies, that player gets a second loading screen.
 - When the host or a guest plays v0.0.25 or an older version, the guest sees no message about the other version.
-- Outside Limgrave, some NPCs may not share talks and quest progress with the whole party.
+- Outside Limgrave, some NPCs may not share talks and quest progress with the whole party. Fixed in v0.0.27.
 
 ## v0.0.25
 
@@ -75,7 +171,7 @@ This update fixes how a player sees the other players in the world and on the ma
 
 - When a player dies far from a Stake of Marika, the game still reloads the area for that player.
 - When a player dies far from a Stake of Marika in a boss fight, the boss fight can start over for the other players.
-- Outside Limgrave, some NPCs may not share talks and quest progress with the whole party.
+- Outside Limgrave, some NPCs may not share talks and quest progress with the whole party. Fixed in v0.0.27.
 
 ## v0.0.24
 
@@ -111,7 +207,7 @@ This update adds shared quest progress, a shop stock for each player, and a new 
 - The map may show another player in the wrong place. Fixed in v0.0.25.
 - When a player dies, the game reloads the area for that player.
 - When a player dies in a boss fight, the boss fight can start over for the other players.
-- Outside Limgrave, some NPCs may not share talks and quest progress with the whole party.
+- Outside Limgrave, some NPCs may not share talks and quest progress with the whole party. Fixed in v0.0.27.
 
 ## v0.0.23
 
