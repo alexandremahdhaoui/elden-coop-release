@@ -4,6 +4,104 @@ Elden Coop lets friends play Elden Ring together in one shared world. The newest
 
 The host is the player who owns the world. A guest is a player who joins the host's world. The party is every player in that world. A session is the time the party plays together.
 
+## v0.0.28
+
+November 24, 2026. All players must update.
+
+This update gives the whole party each item that one player finds, adds crafting with the materials in the party chest and NPC invaders for the party, and fixes sessions that broke, boss items, messages about friends and the path to a friend.
+
+### New features
+
+- Added crafting with the materials in the party chest. When a player crafts an item, the game moves the missing materials from the party chest into the inventory of that player.
+- Added the materials in the party chest to the crafting page. The number beside each material counts the materials in the inventory and in the party chest.
+- Added NPC invaders for the party. When any player walks into the place where an NPC invades, the NPC invades the world of the host. Every player in the party can fight that NPC invader.
+- Added items for the whole party. When a player picks up an item from a chest, a corpse or the ground, the game gives the same item to every other player in the party. A player who joins the world later gets every item that the party found before. Plants and other materials that grow back stay with the player who picks them up.
+- Added a party message for items from the party. When the party gives a player an item, the game shows a message to that player. The game shows the message about items from the party even when the player turns off the setting Party messages.
+- Added the setting Items from friends. When a player turns the setting Items from friends off, the party gives that player no items from chests, corpses or the ground. The other players in the party still get each item that the player picks up.
+- Added the setting Stand up with no loading screen. When a player turns the setting Stand up with no loading screen off, the player gets the loading screen of the base game after each death.
+
+### Changes
+
+- Changed the fight view during an NPC invasion. When a player who watches presses X or F7 twice and the last grace is in another part of the map, the player stands up where the player died. The NPC invader stays in the world of the host.
+- Changed the column of light over each friend. The game now draws the column of light as a tall ring of bars. A player sees the column of light through walls.
+- Changed the end of the path to a friend. When the path stops before the friend, a small column of light stands at the end of the path.
+- Changed the messages about friends. The game shows each message about a friend in the game's own message box.
+- Changed the message that a guest sees when the host leaves. The message now names the host.
+- Changed the last rest of the party at a grace. The last player to rest at a grace sees the screen go black two times again.
+- Changed items that a player already got from the party. When the player picks up the same item in the world, the game removes the item and gives nothing.
+- Changed items from the party. The game now puts each item from the party in the inventory with no item box. The party message tells the player about the items. A player who joins the world late gets the items from the party one after the other.
+- Changed items from the Land of Shadow. A player without Shadow of the Erdtree gets no item that the party found in the Land of Shadow. A player who buys Shadow of the Erdtree gets the item the next time that player enters the world.
+
+### Bug fixes
+
+- Fixed a bug where a party message said that a guest lit a grace when the host lit that grace. Now the party message names the player who lit the grace.
+- Fixed a bug where party messages and the GO TO rows of the Multiplayer page showed the Steam name of a player. Now the game shows the character name of that player.
+- Fixed a bug where the path to a friend went away when the game did not load the body of that friend. Now the path leads toward the last known place of that friend in the open world.
+- Fixed a bug where the path to a friend showed as a wide white band. Now the game draws the first 40 meters of the path as a thin dark line on the ground.
+- Fixed a bug where the path to a friend went away for 30 seconds or more when that friend was far away. Now the path leads toward a far friend. When the game finds only a part of the way, the path shows that part.
+- Fixed a bug where the path to a friend blinked on and off when the body of that friend jumped between two places. Now the game keeps the last path on the ground for up to 10 seconds while the body of that friend jumps.
+- Fixed a bug where the path went back to the nearest friend after the player traveled to a grace. Now the path keeps the friend that the player picked.
+- Fixed a bug where the game reloaded the area for a player who stood up at a grace and walked back into a boss fight when the other players died. Now the game counts that player in the boss fight while the player stands in the boss arena.
+- Fixed a bug where a player who rode Torrent could stay on foot on the screen of another player. Now the game puts that player back on Torrent.
+- Fixed a bug where a player who got on Torrent kept jumping between two places on the screens of the other players. Now the game tries to stop that jump about two seconds after the jump starts.
+- Fixed a bug where the Torrent of a player could stand in the wrong place on the screens of the other players. Now each game sends the place of its own Torrent to the other players.
+- Fixed a bug where a player got the items of a defeated boss again each time the player joined a world. Now a player gets the items of each boss only once.
+- Fixed a bug where normal enemies kept their health when a friend joined or left the party. Now the game changes the health of normal enemies when the party changes.
+- Fixed a bug where an item from the party could go to another character of the player after the player quit to the main menu. Now an item from the party goes only to the character that played in the session.
+- Fixed a bug where a player could get the same item from the party twice. Now a player gets each item from the party once.
+- Fixed a bug where a guest without Shadow of the Erdtree was sent into the Land of Shadow when the host stood there. Now that guest joins the world at the place where the guest stands.
+- Fixed a bug where an NPC could stay at an old step of a quest for a player who heard a missed NPC line. Now the NPC moves on with the quest after the player hears the line.
+- Fixed a bug where the path to a friend could stay hidden after a loading screen. Now the path shows again a few seconds after the load.
+- Fixed a bug where the game could crash in rare cases when a session started or ended.
+- Fixed a bug where a door that a friend opened with a key in an earlier session could stay shut for a player. Now the door opens when that player joins the world.
+- Fixed a bug where a player could still get Baldachin's Blessing twice when the game of that player gave Baldachin's Blessing late. Now a player gets Baldachin's Blessing once.
+- Fixed a bug where a player missed a map fragment when the game failed to give the map fragment. Now the game tries again to give the map fragment.
+- Fixed a bug where some NPCs in the Land of Shadow reacted to a friend who stood far away. Now those NPCs react to the player who stands near them.
+- Fixed a bug where a guest who walked away from an NPC invader sent that NPC invader home for the whole party. Now the NPC invader goes home only when every player walks away from the NPC invader.
+- Fixed a bug where the host could no longer see an NPC invader after the host died. Now a player who dies while a friend fights an NPC invader watches the fight. The player who died comes back when the NPC invader is gone.
+- Fixed a bug where a guest who lost the session came back at the start of Limgrave. Now the guest joins the host again from the world of that guest and arrives next to the host.
+- Fixed a bug where a guest who could not join the host again waited on a loading screen for more than a minute. Now the guest goes back to the world of that guest and sees a message that the session ended.
+- Fixed a bug where GO TO moved the host to the start of Limgrave long after the host picked GO TO. Now GO TO moves a player only to a friend who plays in the same session.
+- Fixed a bug where a guest could not join the host again for two minutes after a boss fight. Now a guest can join the host again as soon as the boss falls.
+- Fixed a bug where a player who was dead when the party defeated a boss got no runes from that boss. Now every player who fought the boss gets the runes once.
+- Fixed a bug where a guest could mark a boss as defeated after a session broke. Now a guest marks a boss as defeated only after that guest fought the boss.
+- Fixed a bug where a guest who lost the session could not join the host again until the host quit the game. Now the game of the host restarts the session after the first failed join of that guest. The host and the guest each see a short message. Each other guest goes back to the world of that other guest and then joins the restarted session.
+- Fixed a bug where a player who died and watched a boss fight kept watching after the party defeated some bosses. Now the fight view ends when the boss falls.
+- Fixed a bug where the column of light over a friend went away when the game did not load the body of that friend. Now the column of light stands at the last known place of that friend in the open world.
+- Fixed a bug where a player who kept pressing X or F7 after the fight view ended could stand up at the place of death during the loading screen. Now the game ignores those presses while the area loads.
+- Fixed a bug where a player who died in a boss fight could fall through the world after the boss fell. Now the player stands up at the last place where the player stood on the ground.
+- Fixed a bug where a player could fall under the world and keep falling. Now the game moves the player back to the last place where the player stood on the ground.
+- Fixed a bug where the boss fight did not reset for the host when the last friend in the fight died just after the host left a loading screen. Now the game reloads the area for the host as soon as the host stands in the world.
+- Fixed a bug where a guest saw no Glintstone Whetblade on the ground while the host saw the Glintstone Whetblade. Now when a friend picks up a key item that the game hides from a player, that player gets the key item.
+- Fixed a bug where a player left the session when the player chose to quit and the game did not quit. Now a player leaves the session only when the game of that player goes back to the title menu.
+- Fixed a bug where a player who died while a friend was alive got a loading screen in some areas and in the open world. Now the player stands up with no loading screen at the same place where a loading screen would put the player.
+- Fixed a bug where a player who stood up with no loading screen was invisible and could not move or die again until the next loading screen. Now the player shows again after the stand up, and the next death works.
+- Fixed a bug where an NPC could stay at another step of a quest for a guest after a loading screen. Now the game of the guest takes the quest step of each NPC from the host when the loading screen ends.
+
+### Other
+
+- Improved items from the party during a loading screen. The game now gives the item after the loading screen ends.
+- Improved the game near some NPCs such as Gatekeeper Gostoc in Stormveil Castle. The game now sends far fewer messages between the players while the party stands near those NPCs.
+
+### Known issues
+
+- When a player uses a red sign that leads into the world of an NPC during a session, the game refuses the red sign. Workaround: leave the session, then use the red sign.
+- An NPC invader still makes enemies a little stronger while the NPC invader is in the world of the host.
+- When the body of a player does not come back after the player stands up with no loading screen, the game reloads the area for that player. Workaround: turn the setting Stand up with no loading screen off.
+- The column of light over a friend is hard to see from far away. The column of light and the path to a friend are not see through yet.
+- A guest can still lose the session when every player rests at a grace. The guest then joins the host again and arrives next to the host.
+- After a guest loses the session at a grace, the grace menu of that guest can show no Level Up. When a guest sees no Level Up at a grace, the guest sends a bug report.
+- Some NPCs can be missing in the world for a guest. When a guest does not see an NPC that the host sees, both players send a bug report.
+- A guest can get a lower frame rate after 30 minutes or more in a session. When the frame rate of a guest drops, the guest sends a bug report.
+- A player who rides Torrent can still jump between two places on the screens of the other players. When a player sees a friend on Torrent jump between two places, both players send a bug report.
+- When a friend joins or leaves during a boss fight, the boss keeps the health that the boss had when the fight started.
+- A player who joins a session after a friend heard an NPC line does not hear the full line from that NPC.
+- When a save takes more than 10 seconds as a player closes the game, the game can still crash while the game closes.
+- When a player stands up at a grace and walks back into some boss fights, the game can reload the area for that player when the other players in the fight die.
+- When an enemy drops an item only once, only the player who picks up the item gets the item. Workaround: every player picks up the item from the enemy.
+- Some chests can keep their item for the player who opens the chest. Workaround: every player opens the chest.
+- A chest that another player already opened can stay closed for the rest of the party. When a player opens that chest, the chest is empty.
+
 ## v0.0.27
 
 November 22, 2026. All players must update.
