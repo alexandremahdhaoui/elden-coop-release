@@ -4,6 +4,36 @@ Elden Coop lets friends play Elden Ring together in one shared world. The newest
 
 The host is the player who owns the world. A guest is a player who joins the host's world. The party is every player in that world. A session is the time the party plays together.
 
+## v0.0.29
+
+November 25, 2026. All players must update.
+
+This update fixes players on Torrent who appeared high in the sky, fixes friends who stayed invisible after GO TO, and gives the column of light over a friend a new look.
+
+### New features
+
+- Added the setting "Column of light fades toward the top". The setting is on by default. When the setting is on, the column of light over a friend is strong near the ground and fades smoothly toward the sky. When the setting is off, the column of light keeps the same strength from the ground to the top of the screen.
+
+### Changes
+
+- Changed the column of light over each friend. The game now draws the column of light as a round column with a bright edge on each side and a clear middle. The column of light rises to the top of the screen. The column of light is faint when the friend is near and bright when the friend is far away. The game draws no column of light over a friend who stands next to the player.
+- Changed the path to a friend. The game now draws the path as a dark shade that a player can see the ground through.
+- Changed how the host treats a guest with a lost connection. When the host cannot reach a guest for 30 seconds, the host removes that guest from the party. When the connection of that guest works again, the game tells that guest that the session ended.
+
+### Bug fixes
+
+- Fixed a bug where one guest with a bad connection stopped the host from sending world progress to the guests who joined after that guest. Now the host keeps sending to every other guest.
+- Fixed a bug where a guest could wait forever to enter the world of the host when a message got lost during the join. Now the guest asks the host again after 20 seconds.
+
+- Fixed a bug where a player on Torrent appeared high in the sky on the screen of another player. Now the game shows a player on Torrent on the ground.
+- Fixed a bug where a player who got on Torrent jumped back and forth between the saddle and the place where the player got on, for up to 2 seconds. Now the game shows that player in the saddle at once.
+- Fixed a bug where a friend stayed invisible after that friend used GO TO to reach a player in a dungeon. Now the game shows that friend next to the player within a few seconds.
+- Fixed a bug where the column of light over a friend stood far away from that friend. Now the column of light stands at the last known place of that friend.
+- Fixed a bug where the column of light flashed in the wrong place when a friend appeared. Now the column of light appears half a second after that friend does.
+
+- Fixed a bug where a player who rested at a grace and then died while a friend was alive stood up high in the air and then got a loading screen. Now the player stands up at the grace with no loading screen.
+- Fixed a bug where the game reloaded the area for a player who stood up with no loading screen while the body of that player was still falling. Now the game reloads the area only when the body of that player does not come back.
+
 ## v0.0.28
 
 November 24, 2026. All players must update.
