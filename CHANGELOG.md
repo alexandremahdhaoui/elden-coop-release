@@ -4,6 +4,25 @@ Elden Coop lets friends play Elden Ring together in one shared world. The newest
 
 The host is the player who owns the world. A guest is a player who joins the host's world. The party is every player in that world. A session is the time the party plays together.
 
+## v0.0.30
+
+November 26, 2026. All players must update.
+
+This update changes how a guest joins the host again after a lost connection.
+
+### Changes
+
+- Changed what happens when a guest loses the connection to the host three times in a row. The game now stops and tells the guest to join again from the Multiplayer menu.
+
+### Bug fixes
+
+- Fixed a bug where a guest who lost the connection to the host joined the host again at once, with no reload. Now the game reloads the guest at the last grace of that guest and then joins the host again.
+- Fixed a bug where a short press of F9 did not mark the moment in the bug report. Now every press of F9 marks the moment.
+
+### Known issues
+
+- A guest can lose the Level Up option at a grace, the talk with Melina and the use of lifts during a session. Workaround: the guest quits to the title screen and joins the host again.
+
 ## v0.0.29
 
 November 25, 2026. All players must update.
@@ -24,15 +43,18 @@ This update fixes players on Torrent who appeared high in the sky, fixes friends
 
 - Fixed a bug where one guest with a bad connection stopped the host from sending world progress to the guests who joined after that guest. Now the host keeps sending to every other guest.
 - Fixed a bug where a guest could wait forever to enter the world of the host when a message got lost during the join. Now the guest asks the host again after 20 seconds.
-
+- Fixed a bug where the party chest kept an item for a long time after the player who took that item lost the connection. Now the party chest gives that item back after 30 seconds.
 - Fixed a bug where a player on Torrent appeared high in the sky on the screen of another player. Now the game shows a player on Torrent on the ground.
 - Fixed a bug where a player who got on Torrent jumped back and forth between the saddle and the place where the player got on, for up to 2 seconds. Now the game shows that player in the saddle at once.
 - Fixed a bug where a friend stayed invisible after that friend used GO TO to reach a player in a dungeon. Now the game shows that friend next to the player within a few seconds.
 - Fixed a bug where the column of light over a friend stood far away from that friend. Now the column of light stands at the last known place of that friend.
 - Fixed a bug where the column of light flashed in the wrong place when a friend appeared. Now the column of light appears half a second after that friend does.
-
 - Fixed a bug where a player who rested at a grace and then died while a friend was alive stood up high in the air and then got a loading screen. Now the player stands up at the grace with no loading screen.
 - Fixed a bug where the game reloaded the area for a player who stood up with no loading screen while the body of that player was still falling. Now the game reloads the area only when the body of that player does not come back.
+
+### Other
+
+- Improved the work that Elden Coop does in the background while a player plays. Elden Coop now needs much less time to keep the game clock, to save the progress of the world and to welcome a friend who joins.
 
 ## v0.0.28
 
