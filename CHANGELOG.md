@@ -4,6 +4,35 @@ Elden Coop lets friends play Elden Ring together in one shared world. The newest
 
 The host is the player who owns the world. A guest is a player who joins the host's world. The party is every player in that world. A session is the time the party plays together.
 
+## v0.0.31
+
+November 27, 2026. All players must update.
+
+This update removes an item from the world of every player when one player picks that item up, fixes a fall through the floor after GO TO, and stops Melina from offering the trip to Roundtable Hold after each join.
+
+### Changes
+
+- Changed where GO TO takes a player when a friend fights a boss behind a fog. The player now arrives at the spot where the friend walked into the fog. The player walks through the fog to join the friend. When the game does not know that spot, the player arrives at a grace near the fight.
+- Changed the party message for an item that another player picks up. The party message now names the player and the item, such as "Tarnished picked up Golden Seed".
+- Changed the game so that the game no longer opens the microphone of a player during a session. Elden Coop has no voice chat.
+
+### Bug fixes
+
+- Fixed a bug where an item that one player picked up stayed in the world of the other players. Now the item disappears from the world of every player in the party as soon as one player picks the item up.
+- Fixed a bug where a player who used GO TO to reach a friend in a boss fight fell through the floor and died. Now the game holds the player in place until the floor under the player is ready.
+- Fixed a bug where the game counted a boss as defeated after that boss fell through the floor with no fight. Now the game holds the boss in place until the floor under the boss is ready.
+- Fixed a bug where Melina offered a guest the trip to Roundtable Hold again at the first rest after each join. Now Melina makes that offer to a guest only once.
+- Fixed a bug where a guest lost the Level Up option at a grace and the talk with Melina after a join. Now the game checks the guest before every join and reloads the guest first when the check fails.
+- Fixed a bug where a guest had to join the host again from the title screen when the session ended in the middle of a join. Now the game waits for the old session to close, reloads the guest at the last grace and joins the host again.
+- Fixed a bug where the game of a player froze for more than one second during a session. Now the game keeps running during a session.
+- Fixed a bug where the game froze for about one second when a session started on a PC that uses a Bluetooth headset as the microphone. Now the game does not open the microphone.
+- Fixed a bug where a friend on Torrent moved in small jumps when the friend was far away. Now a friend on Torrent moves smoothly when the friend is far away.
+- Fixed a bug where a guest who stood on a lift fell to the bottom when the host used the same lift. Now the guest stays on the lift.
+
+### Known issues
+
+- A lift sometimes does not move for a guest who stands on the lift at the top.
+
 ## v0.0.30
 
 November 26, 2026. All players must update.
